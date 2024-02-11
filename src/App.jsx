@@ -12,7 +12,7 @@ const App = () => {
                 <Navbar />
             </div>
             <div className="main">
-                <Layout style={{ height: "100vh", justifyContent: "space-between", overflowY: "auto" }}>
+                <Layout className="layout-container">
                     <div className="routes">
                         <Routes>
                             <Route path="/" element={<Homepage />} />

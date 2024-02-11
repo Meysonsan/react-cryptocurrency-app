@@ -33,6 +33,11 @@ a:hover{
     width: 100%;
     
 }
+.layout-container{
+    height: 100vh;
+    justify-content: space-between;
+    overflow-y: auto;
+}
 .routes{
     padding: 20px;
 }
@@ -103,7 +108,9 @@ a:hover{
     .navbar{
         flex: 1;
     }
-
+    .layout-container{
+        height: calc(100vh - 90px);
+    }
     .main{
         flex: 1;
         margin-top: 90px;
