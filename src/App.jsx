@@ -12,17 +12,19 @@ const App = () => {
                 <Navbar />
             </div>
             <div className="main">
-                <Layout>
-                    <div className="routes">
-                        <Routes>
-                            <Route path="/" element={<Homepage />} />
-                            <Route exact path="/exchanges" element={<Exchanges />} />
-                            <Route exact path="/cryptocurrencies" element={<Cryptocurrencies />} />
-                            <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
-                            <Route exact path="/news" element={<News />} />
-                        </Routes>
-                    </div>
-                </Layout>
+                <div className="layout-container" style={{ height: "calc(100% - 114px)" }}>
+                    <Layout>
+                        <div className="routes">
+                            <Routes>
+                                <Route path="/" element={<Homepage />} />
+                                <Route exact path="/exchanges" element={<Exchanges />} />
+                                <Route exact path="/cryptocurrencies" element={<Cryptocurrencies />} />
+                                <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
+                                <Route exact path="/news" element={<News />} />
+                            </Routes>
+                        </div>
+                    </Layout>
+                </div>
                 <div className="footer">
                     <Typography.Title level={5} style={{color: "white", textAlign: "center"}}>
                             Cryptoverse <br />
