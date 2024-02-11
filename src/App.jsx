@@ -12,30 +12,28 @@ const App = () => {
                 <Navbar />
             </div>
             <div className="main">
-                <div className="layout-container" style={{ height: "calc(100% - 114px)" }}>
-                    <Layout>
-                        <div className="routes">
-                            <Routes>
-                                <Route path="/" element={<Homepage />} />
-                                <Route exact path="/exchanges" element={<Exchanges />} />
-                                <Route exact path="/cryptocurrencies" element={<Cryptocurrencies />} />
-                                <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
-                                <Route exact path="/news" element={<News />} />
-                            </Routes>
-                        </div>
-                    </Layout>
-                </div>
-                <div className="footer">
-                    <Typography.Title level={5} style={{color: "white", textAlign: "center"}}>
-                            Cryptoverse <br />
-                            All rights reserverd
-                    </Typography.Title>
-                    <Space>
-                        <Link to="/">Home</Link>
-                        <Link to="/exchanges">Exchanges</Link>
-                        <Link to="/news">News</Link>
-                    </Space>
-                </div>
+                <Layout style={{ height: "100vh", justifyContent: "space-between", overflowY: "auto" }}>
+                    <div className="routes">
+                        <Routes>
+                            <Route path="/" element={<Homepage />} />
+                            <Route exact path="/exchanges" element={<Exchanges />} />
+                            <Route exact path="/cryptocurrencies" element={<Cryptocurrencies />} />
+                            <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
+                            <Route exact path="/news" element={<News />} />
+                        </Routes>
+                    </div>
+                    <div className="footer">
+                        <Typography.Title level={5} style={{color: "white", textAlign: "center"}}>
+                                Cryptoverse <br />
+                                All rights reserverd
+                        </Typography.Title>
+                        <Space>
+                            <Link to="/">Home</Link>
+                            <Link to="/exchanges">Exchanges</Link>
+                            <Link to="/news">News</Link>
+                        </Space>
+                    </div>
+                </Layout>
             </div>
         </div>
     )
